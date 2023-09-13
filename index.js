@@ -40,10 +40,14 @@ function findAndDelete() {
         ...comments.slice(0, commentIndex),
         ...comments.slice(commentIndex + 1)
     ];
-    console.log('Original Comments');
+    
+    console.groupCollapsed('Original Comments');
     console.table(comments);
+    console.groupEnd('Original Comments')
+    
+    console.groupCollapsed('Updated Comments');
     console.log('Index of Comment to Delete: ', commentIndex);
-    console.log('Updated Comments');
     console.table(updatedComments);
+    console.groupEnd('Updated Comments')
 }
 
