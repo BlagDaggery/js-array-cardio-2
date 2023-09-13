@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Array Cardio 💪💪</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Array Cardio 2 | JavaScript 30 | BlagDaggery</title>
+  <link rel="icon" href="https://fav.farm/🏃🏻‍♂️" />
 </head>
 <body>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-  <script>
+  <p><em>Psst: have a look at the JavaScript Console</em> 🤖</p>
+  <h2>Exercise 1</h2>
+  <p>Check to see if any of the people in the people Array are at least 19 years old.</p>
+  <button type="button" onclick="console.log('At least one person is 19 or older: ', isAdult);">Run Exercise 1</button>
+  <h2>Exercise 2</h2>
+  <p>Check to see if all of the people in the people Array are at least 19 years old.</p>
+  <button type="button" onclick="console.log('All of the people are 19 or older: ', allAdult);">Run Exercise 2</button>
+  <h2>Exercise 3</h2>
+  <p>Find the comment with the ID of 823423</p>
+  <button type="button" onclick="console.log('Comment with ID = 823423: ', findComment);">Run Exercise 3</button>
+  <h2>Exercise 4</h2>
+  <p>Find the comment with the ID of 823423 and delete it</p>
+  <button type="button" onclick="findAndDelete()">Run Exercise 4</button>
+<script>
     // ## Array Cardio Day 2
 
     const people = [
@@ -44,12 +57,18 @@
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
-    const commentIndex = comments.findIndex(comment => comment.id === 823423);
-    
-    const updatedComments = [
-        ...comments.slice(0, commentIndex),
-        ...comments.slice(commentIndex + 1)
-    ];
+    function findAndDelete() {
+        const commentIndex = comments.findIndex(comment => comment.id === 823423);
+        const updatedComments = [
+            ...comments.slice(0, commentIndex),
+            ...comments.slice(commentIndex + 1)
+        ];
+        console.log('Original Comments');
+        console.table(comments);
+        console.log('Index of Comment to Delete: ', commentIndex);
+        console.log('Updated Comments');
+        console.table(updatedComments);
+    }
 
   </script>
 </body>
